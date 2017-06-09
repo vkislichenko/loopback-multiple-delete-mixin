@@ -1,0 +1,25 @@
+{
+  "name": "loopback-multiple-delete-mixin",
+  "version": "0.0.1",
+  "description": "A mixin to delete multiple data in a loopback Model by sending a list of ids",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/b3rew/loopback-multiple-delete-mixin.git"
+  },
+  "keywords": [
+    "loopback",
+    "multiple",
+    "delete",
+    "mixin"
+  ],
+  "author": "b3rew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/b3rew/loopback-multiple-delete-mixin/issues"
+  },
+  "homepage": "https://github.com/b3rew/loopback-multiple-delete-mixin#readme"
+}
