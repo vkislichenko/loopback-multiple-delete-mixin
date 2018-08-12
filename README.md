@@ -1,35 +1,38 @@
 # loopback-multiple-delete-mixin
 A mixin to delete multiple data in a loopback Model by sending a list of ids.
 
-## INSTALL
+INSTALL
+=============
 
 ```
 npm install --save loopback-multiple-delete-mixin
 ```
 
-###### you can enable mixin by editing `server.js`:
+SERVER CONFIG
+=============
+Add the mixins property to your server/model-config.json:
 
-In your server/server.js file add the following line before the boot(app, __dirname); line.
-
-```js
-...
-var app = module.exports = loopback();
-...
-// Add multiple-delete-mixin to loopback
-require('loopback-multiple-delete-mixin')(app);
-
-boot(app, __dirname, function(err) {
-  'use strict';
-  if (err) throw err;
-
-  // start the server if `$ node server.js`
-  if (require.main === module)
-    app.start();
-});
+```
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "../node_modules/loopback-multiple-delete-mixin",
+      "../common/mixins"
+    ]
+  }
+}
 ```
 
 
-## CONFIG
+MODEL CONFIG
+=============
 
 To use with your Models add the `mixins` attribute to the definition object of your model config.
 
